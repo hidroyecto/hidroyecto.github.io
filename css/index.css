@@ -1,0 +1,229 @@
+:root{
+    --bgColor: #e6d9d9;
+}
+
+*{
+    font-family: 'Poppins',sans-serif;
+}
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(to right, #479423, #a8e063);
+    color: var(--bgColor);
+}
+
+nav{
+    height: fit-content;
+    width: fit-content;
+    min-width: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 2.4em;
+    position: sticky;
+    top: 0;
+    background-color: rgba(216, 188, 188, 0.377);
+    border-radius: .4em;
+    z-index:1000;
+    margin-top:-2
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    padding: 0 .7em;
+}
+
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+a:hover:after{
+    width: 100%;
+}
+
+.container-img{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 4em;
+    margin-top: 8em;
+}
+
+.container-img img{
+    width: 30rem;
+    filter: drop-shadow(0em 0.2em 0.3em #4d4545b6);
+}
+
+.container-img img:hover{
+    transform: scale(1.01);
+    transition: 0.5s;
+    filter: drop-shadow(0em 0.2em 0.3em #000000d7);
+}
+
+main{
+    font-size: 1.1em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.text-container{
+    width: 35em;
+    color: black;
+    text-align: justify;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.text-container:hover{
+    transform: translateY(-2%);
+    filter: blur(.5px) grayscale(2);
+    color: white;
+    text-indent: 1em;
+    text-shadow: .1em .1em .2em black;
+    transition: 0.4s;
+    box-shadow: .2em .2em .4em rgba(0, 0, 0, 0.781);
+}
+
+/*////// SOBRE NOSOTROS //////*/
+
+.nosotros{
+    width: 30em;
+    margin: auto;
+    margin-top: 3em;
+}
+
+.img-nosotros{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#img-1{
+    margin-left: 0;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    object-fit: cover;
+    background: url(/img/index/lechuga-2.webp);
+    margin-right: 6em;
+}
+
+#img-2{
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    object-fit: cover;
+    background: url(/img/index/lechuga-1.png);
+}
+
+.contactos{
+    background-color: rgba(218, 224, 222, 0.349);
+    padding: 2em;
+    padding-inline: 3em;
+    border-radius: .4em;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.contactos h2{
+    font-size: 2em;
+}
+
+.contactos:hover{
+    box-shadow: .1em .2em .5em rgb(92, 88, 88);
+    transform: scale(1.01);
+    transition: .5s;
+}
+
+textarea{
+    border: none;
+    text-indent: .5em;
+}
+
+.contactos h2{
+    margin-bottom: 1em;
+}
+
+.contactos input{
+    border: none;
+    border-radius: .4em;
+    padding: .4em;
+    margin-bottom: .7em;
+    width: 100%;
+}
+
+.contactos input[type="submit"]{
+    background-color:#d6d0d0a3;
+}
+
+.contactos input[type="submit"]:hover{
+    background-color:#2b2525af;
+    color: var(--bgColor);
+    transition: .5s;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+}
+
+hr{
+    border:none;
+    border-top:.5px solid #ffffff;
+    
+}
+
+::-webkit-scrollbar {
+    width: .8em;
+    background-color: #a8e063;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #37ad3d;
+        }
+
+
+@media(max-width: 400px){
+    body, html{
+        height: auto !important;
+    }
+    
+    .contactos{
+        width: fit-content;
+    }
+
+    footer p{
+        font-size: 0.6em;
+    }
+}
